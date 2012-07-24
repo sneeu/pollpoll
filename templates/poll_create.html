@@ -1,0 +1,12 @@
+Poll create.
+
+<form method="POST" action="">
+	{{ form.csrf_token }}
+	<div>
+		{{ form.question.label }} {{ form.question(size=20) }}
+	</div>
+	<div>
+		{{ form.choices.label }} {{ form.choices() }}
+	</div>
+	<button type="submit">Create</button>
+</form>

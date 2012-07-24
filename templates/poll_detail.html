@@ -1,0 +1,15 @@
+{{ poll.question }}
+
+<ul>
+	{% for choice, choice_form in choices %}
+	<li>
+		{{ choice.name }}: {{ choice.votes }}
+		<form action="" method="post">
+			{{ choice_form.csrf_token }}
+			{{ choice_form.choice }}
+
+			<button type="submit">Vote</button>
+		</form>
+	</li>
+	{% endfor %}
+</ul>
