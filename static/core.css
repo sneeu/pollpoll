@@ -1,0 +1,83 @@
+* { margin: 0; list-style: none; padding: 0; }
+body {
+	background: #fff;
+	color: #333;
+	font: 200%/1.5em "Helvetica Neue",Arial,Helvetica,sans-serif;
+	padding: 1.5em;
+}
+
+a {
+	color: #3b8686;
+}
+a:hover {
+	color: #79bd9a;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.5em;
+	padding: 0 0 0.75em;
+}
+p {
+	padding: 0 0 1.5em;
+}
+
+label {
+	display: block;
+}
+input {
+	border: 1px solid #ddd;
+	font: inherit;
+	margin: 0 0 0.25em;
+	padding: 0.25em;
+	width: 20em;
+}
+button {
+	background: #0b486b;
+	border: 0;
+	color: #cff09e;
+	font: inherit;
+	padding: 0.25em;
+}
+
+.field {
+	padding: 0 0 0.75em;
+}
+.errors {
+	background: #c02;
+	border: 1px solid #c02;
+	color: #fff;
+	display: inline-block;
+	list-style: none;
+	padding: 0.25em;
+}
+
+#choices li {
+	list-style: none;
+}
+#choices li label {
+	display: none;
+}
+
+#vote li {
+	clear: both;
+	float: left;
+	padding: 0 0 0.25em;
+	width: 100%;
+}
+#vote label {
+	float: left;
+	padding: 0.25em;
+	width: 6em;
+}
+#vote .votes {
+	background: #a8dba8;
+	color: #000;
+	float: left;
+	padding: 0.25em;
+	text-align: right;
+	width: 25em;
+}
+#vote form {
+	float: right;
+}

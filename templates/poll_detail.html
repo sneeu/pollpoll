@@ -1,15 +1,27 @@
-{{ poll.question }}
+{% extends "base.html" %}
 
-<ul>
-	{% for choice, choice_form in choices %}
-	<li>
-		{{ choice.name }}: {{ choice.votes }}
-		<form action="" method="post">
-			{{ choice_form.csrf_token }}
-			{{ choice_form.choice }}
 
-			<button type="submit">Vote</button>
-		</form>
-	</li>
-	{% endfor %}
-</ul>
+{% block extrahead %}
+	<script src="{{ url_for('static', filename='zepto.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename='vote.js') }}" type="text/javascript"></script>
+{% endblock %}
+
+
+{% block content %}
+	<h1>{{ poll.question }}</h1>
+
+	<ul id="vote">
+		{% for choice, choice_form in choices %}
+		<li>
+			<label>{{ choice.name }}</label>
+			<div class="votes">{{ choice.votes }}</div>
+			<form action="" method="post">
+				{{ choice_form.csrf_token }}
+				{{ choice_form.choice }}
+
+				<button type="submit">Vote</button>
+			</form>
+		</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

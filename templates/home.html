@@ -1,1 +1,8 @@
-Home
+{% extends "base.html" %}
+
+
+{% block content %}
+	<h1>Pollpoll</h1>
+
+	<p><a href="{{ url_for('poll_create') }}">Create a poll &rarr;</a></p>
+{% endblock %}

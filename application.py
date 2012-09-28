@@ -22,7 +22,8 @@ def poll_create():
     if form.validate_on_submit():
         poll = Poll.create(form.question.data)
         for choice in form.choices:
-            Choice.create(poll.key, choice.data)
+            if choice.data:
+                Choice.create(poll.key, choice.data)
         return redirect(url_for('poll_detail', poll_key=poll.key))
 
     return render_template('poll_create.html', form=form)
